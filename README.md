@@ -8,13 +8,6 @@ My task was to create a simple calendar application that allows a user to save e
 
 This app will runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
-## User Story
-
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
 
 ## Acceptance Criteria
 
@@ -61,9 +54,10 @@ You must complete the following tasks for this project:
 
 
 
-## Future Features
+## Extra Features
 
-This project makes me really want to make a full to-do and Calandar in the future. 
+Added feature to add hours to the beginning and end of the day if you need to extend your work day. 
+
 
 ## What I Learned
 

@@ -17,7 +17,41 @@ $(function () {
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+  // attribute of each time-block be used to do this? 
+
+
+  let workDayHours = [6, 7, 8, 9, 10, 11, 12, 13, 14];
+  //? Add hour to the beginning of the day
+  $("#prepend_hour").on("click", function () {
+    let prependedHour = workDayHours[0] - 1;
+    if (prependedHour === -1){
+      alert("no more hours in the day!");
+      return;
+    }
+    workDayHours.unshift(prependedHour);
+    $("<li>" + prependedHour +"</li>").insertBefore($("#timeblocks li:first"));
+  });
+  
+  //? Add hour to the end of the day
+  $("#append_hour").on("click", function () {
+    let appendedHour = workDayHours[workDayHours.length - 1] + 1;
+    if (appendedHour === 25){
+      alert("no more hours in the day!");
+      return;
+    }
+    workDayHours.push(appendedHour);
+    $("#timeblocks").append("<li>" + appendedHour + "</li>");
+  });
+
+  //? Display the current date in the header of the page.
+  var today = dayjs().format("MMMM, DD YYYY");
+  $("#currentDay").text("Today is " + today + ". Let's get this bread.");
 });
+
+
+
+
+
+
+
+
