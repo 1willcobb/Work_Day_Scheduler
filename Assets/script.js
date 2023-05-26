@@ -20,38 +20,87 @@ $(function () {
   // attribute of each time-block be used to do this? 
 
 
-  let workDayHours = [6, 7, 8, 9, 10, 11, 12, 13, 14];
+  let workDayHours2 = [6, 7, 8, 9, 10, 11, 12, 13, 14];
   //? Add hour to the beginning of the day
   $("#prepend_hour").on("click", function () {
-    let prependedHour = workDayHours[0] - 1;
+    let prependedHour = workDayHours2[0] - 1;
     if (prependedHour === -1){
       alert("no more hours in the day!");
       return;
     }
-    workDayHours.unshift(prependedHour);
+    workDayHours2.unshift(prependedHour);
     $("<li>" + prependedHour +"</li>").insertBefore($("#timeblocks li:first"));
   });
   
   //? Add hour to the end of the day
   $("#append_hour").on("click", function () {
-    let appendedHour = workDayHours[workDayHours.length - 1] + 1;
+    let appendedHour = workDayHours2[workDayHours2.length - 1] + 1;
     if (appendedHour === 25){
       alert("no more hours in the day!");
       return;
     }
-    workDayHours.push(appendedHour);
+    workDayHours2.push(appendedHour);
     $("#timeblocks").append("<li>" + appendedHour + "</li>");
   });
 
   //? Display the current date in the header of the page.
   var today = dayjs().format("MMMM, DD YYYY");
   $("#currentDay").text("Today is " + today + ". Let's get this bread.");
+
+  let workDayHoursEmpty = {
+    6:[],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: [],
+    12: [],
+    13: [],
+    14: [],
+  
+  }; 
+  
+  var workDayHours = {};
+  
+  function pullStorage() {
+    var workDayStorage = JSON.parse(localStorage.getItem("workDayStorage"));
+    if (workDayStorage !== null){
+      workDayHours = workDayStorage;
+    } else {
+      console.log("caught an empty storage");
+      workDayHours = { ...workDayHoursEmpty };
+      localStorage.setItem("workDayStorage", JSON.stringify(workDayStorage));
+    }
+    
+    
+  };
+  
+  function storeWorkday(){
+    localStorage.setItem("workDayStorage", JSON.stringify(workDayHours));
+    console.log(workDayHours)
+    console.log(Object.values(workDayHours[6]));
+  }
+  
+  pullStorage();
+  storeWorkday();
 });
 
 
+/*
+<li id="hour-9" class="row time-block past">
+  <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
+  <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+  <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+    <i class="fas fa-save" aria-hidden="true"></i>
+  </button>
+</li>
+*/
 
+// create a li block for each hour of the day
+  //li block needs container <li>
+    //div for title
+    //text area for writing input
+    //button to save
 
-
-
-
+// save button needs to save to dom.
 
