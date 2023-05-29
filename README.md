@@ -50,4 +50,4 @@ Really enjoyed how how great jQuery is to simply things and DayJS is really cool
 
 ## Live Site
 
-[Password Generator](https://1willcobb.github.io/Work_Day_Scheduler/)
+[Work Day Scheduler](https://1willcobb.github.io/Work_Day_Scheduler/)
