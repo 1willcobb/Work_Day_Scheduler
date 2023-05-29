@@ -8,32 +8,6 @@ My task was to create a simple calendar application that allows a user to save e
 
 This app will runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
-
-## Acceptance Criteria
-
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
-
-
-
 ## Challange
 
 I was challenged to make a code quiz that is a series of questions that must be completed in an alloted time. It was to capture High Scores entered and have a HS page.
@@ -49,14 +23,15 @@ You must complete the following tasks for this project:
 * There should be a button to the right of each timeblock. When this button is clicked, save the corresponding event to localstorage for that time slot.
 * When loading the page, fetch all the stored data for each timeslot from localstorage and put those values in the corresponding textboxes for the given timeblocks.
 
-## How it works
-
-
-
-
 ## Extra Features
 
-Added feature to add hours to the beginning and end of the day if you need to extend your work day. 
+Added feature to add hours to the beginning and end of the day if you need to extend your work day.
+
+Though this sounds easy, I had to rethink my data structure for storing the data since the addition of new data before and after made it difficult to use an array on its own. 
+
+I ended up using an array of dictionaries to store key value pairs matching each hour. 
+
+hour, text, and status.
 
 
 ## What I Learned

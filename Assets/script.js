@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
-  let nowHour = dayjs().hour() - 12;
+  let nowHour = dayjs().hour();
   pullStorage()
   createList()
 
