@@ -12,6 +12,10 @@ textarea {
   padding: 10px;
 }
 
+button {
+  background-color: transparent;
+}
+
 .description {
   white-space: pre-wrap;
 }

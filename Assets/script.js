@@ -160,22 +160,3 @@ function pastPresentFuture(hour){
 
 });
 
-
-/*
-<li id="hour-9" class="row time-block past">
-  <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
-  <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
-  <button class="btn saveBtn col-2 col-md-1" aria-label="save">
-    <i class="fas fa-save" aria-hidden="true"></i>
-  </button>
-</li>
-*/
-
-// create a li block for each hour of the day
-  //li block needs container <li>
-    //div for title
-    //text area for writing input
-    //button to save
-
-// save button needs to save to dom.
-

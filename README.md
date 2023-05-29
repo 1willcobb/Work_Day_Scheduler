@@ -40,9 +40,8 @@ Really enjoyed how how great jQuery is to simply things and DayJS is really cool
 
 ## Demo Images
 
-![demo-intro-page](./assets/intro.png)
-![question-page](./assets/questions.png)
-![high-score-page](./assets/HS.png)
+![demo](./assets/Screenshot%202023-05-29%20at%206.50.33%20AM.png)
+
 
 
 ## GitHub Repository
